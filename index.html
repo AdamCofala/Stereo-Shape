@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <link href="https://fonts.cdnfonts.com/css/overpass-2" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StereoShape v1.0</title>
+    <style>
+    
+      html, body {
+          margin: 0;
+          height: 100%;
+          
+      }
+
+      #app {
+          width: 100%;
+          height: 100%;
+          display: block;
+      }
+
+      body::before {
+          content: '';
+          opacity: 90%;
+          position: fixed;
+          bottom: 20px;
+          left: 20px;
+          width: 50px;
+          height: 50px;
+          background-image: url('/StereoShape.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          z-index: 1000;
+          pointer-events: none;
+      }
+
+      .dg.main.a {
+            font-family: 'Overpass' !important;
+            background-color: #fefefe00 !important;
+            opacity: 0.9;
+            width: 390px !important;
+            border-right: 10px;
+            margin-top: 50px !important;
+            margin-right: 50px !important;
+        }
+
+        .dg.main.a .title {
+            font-family: 'Overpass' !important;
+            background: #2a2a3a !important;
+            color: #ffffff !important;
+        }
+
+        .dg.main .close-button {
+            position: fixed;
+            right: 10px;
+            width: 130px !important;
+            -webkit-transition: opacity .1s linear;
+            -o-transition: opacity .1s linear;
+            -moz-transition: opacity .1s linear;
+            transition: opacity .1s linear;
+            line-height: 22px;
+            height: 20px;
+            cursor: pointer;
+            text-align: right;
+            color: #c1b8ff !important;
+            background-color: #1d1d27 !important;
+            border-radius: 5px;
+        }
+
+        .dg li:not(.folder) {
+            font-family: 'Overpass' !important;
+            border-radius:4px;
+            background: #252535 !important;
+            margin-top: 0px;
+        }
+
+
+        .dg .cr{
+            border-radius: 5px;
+            border-left: 2px solid #5d4460 !important;
+        }
+
+        .dg .c input[type="text"],
+        .dg .c select {
+            font-family: 'Overpass' !important;
+            background: #2a2a3a;
+            border: 1px solid #3a3a4a;
+            border-radius: 2px;
+            color: #ffffff;
+        }
+
+        .dg .c input[type="range"]::-webkit-slider-runnable-track {
+            background: #3a3a4a;
+        }
+
+        .dg .c input[type="text"], .dg .c select {
+            background: #2a2a3a;
+            border: 1px solid #3a3a4a;
+            border-radius: 2px;
+            color: #ffffff;
+        }
+
+        .dg .has-slider input[type=text] {
+            width: 30%;
+            background: #1d1d27 !important;
+            border-radius: 5px;
+            margin-left: 0;
+            text-align: center;
+            
+        }
+
+        .dg .c .slider {
+            background: #3a3a4a !important;
+            width: 150px !important;
+        }
+
+        .dg .property-name {
+            color: #c1b8ff !important;
+        }
+
+        .dg .closed ul {
+            background: #1d1d27 !important;
+        }
+
+        .dg .cr .color-picker {
+            border-radius: 4px #ffffff !important;
+            width: 20px !important;
+            background-color: #000000;
+        }
+
+        .dg .c .slider-fg {
+            background: #b384ff !important;
+            max-width: 100% !important;
+            border-radius: 3px;
+        }
+
+        .dg .c{
+           -webkit-text-fill-color: #c1b8ff;
+        }
+
+        .dg .c input[type="checkbox"] {
+           
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            
+            /* Własne wymiary */
+            width: 15px;
+            height: 15px;
+            
+            /* Styl tła i ramki */
+            background-color: #c1b8ff;
+            border: 2px solid #ffffff;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        /* Styl dla stanu zaznaczonego */
+        .dg .c input[type="checkbox"]:checked {
+            background-color: #b384ff;
+            border-color: #ffffff;
+        }
+
+
+        .dg .c input[type="checkbox"]:checked::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='5' stroke-linecap='round'%3E%3Cpath d='M5 12l5 5l10 -10'/%3E%3C/svg%3E") center/65% no-repeat;
+        }
+
+
+    </style>
+  </head>
+  <body>
+    <canvas id="app"></canvas>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
