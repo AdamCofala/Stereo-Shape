@@ -4,6 +4,8 @@
 
 Real-time 3D geometry visualization tool built with Three.js and TypeScript. Create, inspect, and annotate 3D geometric shapes directly in the browser — from simple triangles to prisms and cuboids.
 
+You can play with it online: https://adamcofala.github.io/Stereo-Shape/
+
 **Key Features:**
 - 9 shape types: scalene/right/isosceles/equilateral triangles, regular pyramids, rectangular pyramids, cuboids, regular prisms
 - Interactive 3D orbital camera with mouse rotation and scroll zoom
@@ -123,17 +125,7 @@ The site is available at: `https://<username>.github.io/Stereo-Shape/`
 
 ---
 
-## 5. Tech Stack
-
-- **Three.js** — 3D rendering (WebGL)
-- **TypeScript** — type-safe application code
-- **dat.GUI** — runtime parameter controls
-- **Vite** — dev server and bundler
-- **three/addons** — `Line2`, `LineGeometry`, `LineMaterial` for fat lines
-
----
-
-## 6. Future Enhancements
+## 5. Future Enhancements
 
 - Dimension labels displayed on edges
 - Angle value display (degrees) on arcs
